@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animationCache="false"
+    android:background="@color/light_blue"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonDownload"
+        android:layout_width="163dp"
+        android:layout_height="51dp"
+        android:onClick="readFile"
+        android:text="@string/button1_text"
+        android:textColor="@color/dark_blue"
+        app:backgroundTint="@color/peach"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="132dp"
+        android:layout_height="50dp"
+        android:onClick="writeFile"
+        android:text="@string/button2_text"
+        android:textColor="@color/dark_blue"
+        app:backgroundTint="@color/peach"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toEndOf="@+id/buttonDownload"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filename"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.87"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="190dp"
+        android:layout_height="46dp"
+        android:text="@string/text2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_blue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fileNameInputLayout"
+        android:layout_width="334dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:clickable="false"
+        android:textColorHint="@color/dark_blue"
+        app:boxStrokeColor="#144149"
+        app:endIconTint="#144149"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17000002">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fileNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:hint="@string/text_desc1"
+            android:text="@string/file_end"
+            android:textAllCaps="false"
+            android:textColor="@color/red" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="332dp"
+        android:layout_height="278dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textColorHint="@color/dark_blue"
+        app:boxStrokeColor="@color/dark_blue"
+        app:hintTextColor="#144149"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInput"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="start"
+            android:fontFamily="sans-serif"
+            android:gravity="start|top"
+            android:hint="@string/input_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="79dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/image_desc4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/writing" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

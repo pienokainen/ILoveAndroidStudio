@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Text Editor 1.0</string>
+    <string name="filename">filename.txt</string>
+    <string name="input_text">write your text or print your text here</string>
+    <string name="button1_text">Download text</string>
+    <string name="button2_text">Save text</string>
+    <string name="text2">Editor v1.0 for</string>
+    <string name="text_desc1">insert your filename here</string>
+    <string name="file_end">.txt</string>
+    <string name="image_desc4">writing</string>
+</resources>
