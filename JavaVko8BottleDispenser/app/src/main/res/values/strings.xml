@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">JavaVko8-BottleDispenser</string>
+    <string name="app_name">Bottle Dispenser</string>
+    <string name="add_money">Add</string>
+    <string name="return_money">Ret</string>
+    <string name="receipt">Receipt</string>
+    <string name="placeholder_text">Status will update here!</string>
+    <string name="buy_button_text">Buy</string>
+    <string name="content_desc">cocacola</string>
+    <string name="content_desc2">pepsi</string>
+    <string name="content_desc3">fanta</string>
+    <string name="bottle_info">Choose bottle below</string>
+    <string name="money_info">Choose amount to add</string>
 </resources>
