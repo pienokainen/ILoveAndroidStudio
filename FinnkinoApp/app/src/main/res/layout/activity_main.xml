@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#000000"
     android:backgroundTint="#BF98A0"
+    android:textAlignment="gravity"
     tools:context=".MainActivity">
 
     <View
@@ -113,6 +114,7 @@
         android:id="@+id/theater"
         android:layout_width="234dp"
         android:layout_height="55dp"
+        android:layout_marginStart="10px"
         android:backgroundTint="#AA1155"
         android:dropDownWidth="match_parent"
         android:outlineProvider="none"
@@ -163,18 +165,6 @@
         app:layout_constraintEnd_toEndOf="@+id/movie"
         app:layout_constraintStart_toEndOf="@+id/time"
         app:layout_constraintTop_toBottomOf="@+id/theater" />
-
-    <TextView
-        android:id="@+id/PVM4"
-        android:layout_width="181dp"
-        android:layout_height="39dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="TEATTERI"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/theater"
-        app:layout_constraintEnd_toEndOf="@+id/theater"
-        app:layout_constraintStart_toEndOf="@+id/date"
-        app:layout_constraintTop_toTopOf="@+id/theater" />
 
     <TextView
         android:id="@+id/PVM"
