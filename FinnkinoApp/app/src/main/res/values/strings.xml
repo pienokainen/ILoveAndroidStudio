@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">showMovies</string>
+    <string name="buyTicket">OSTA LIPPUJA</string>
+    <string name="showsHeader">NÄYTÖKSET</string>
 </resources>

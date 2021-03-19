@@ -10,111 +10,63 @@
     tools:context=".MainActivity">
 
     <View
-        android:id="@+id/view4"
-        android:layout_width="416dp"
-        android:layout_height="208dp"
+        android:id="@+id/viewMovies"
+        android:layout_width="383dp"
+        android:layout_height="458dp"
+        android:layout_marginBottom="16dp"
         android:background="#E7ECEF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3"
-        app:layout_constraintVertical_bias="0.323" />
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="410dp"
-        android:layout_height="202dp"
-        android:background="#E7ECEF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.482" />
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="410dp"
-        android:layout_height="109dp"
-        android:background="#E7ECEF"
-        app:layout_constraintBottom_toBottomOf="@+id/movie"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/theater" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="152dp"
-        android:layout_height="176dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view4"
-        app:layout_constraintEnd_toEndOf="@+id/view4"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toTopOf="@+id/view4"
-        app:srcCompat="@drawable/joker_full" />
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buyTicket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#880044"
-        android:text="OSTA LIPPU"
+        android:onClick="onClick"
+        android:text="@string/buyTicket"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintBottom_toBottomOf="@+id/viewMovies"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.888" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="140dp"
-        android:layout_height="35dp"
-        android:text="Elokuvan tiedot"
-        android:textColor="#011627"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/view4"
-        app:layout_constraintVertical_bias="0.092" />
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewMovies"
+        app:layout_constraintVertical_bias="0.951" />
 
     <TextView
         android:id="@+id/PVM5"
-        android:layout_width="181dp"
-        android:layout_height="39dp"
+        android:layout_width="153dp"
+        android:layout_height="40dp"
         android:background="#FFFFFF"
         android:backgroundTint="#880044"
         android:gravity="center_horizontal|center_vertical"
-        android:text="NÄYTÖKSET"
+        android:text="@string/showsHeader"
         android:textColor="#E7ECEF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/view3"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/movies"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        app:layout_constraintTop_toBottomOf="@+id/viewInput" />
 
-    <Spinner
-        android:id="@+id/date"
-        android:layout_width="178dp"
-        android:layout_height="55dp"
-        android:backgroundTint="#AA1155"
-        android:backgroundTintMode="src_atop"
-        android:foregroundTint="#FFFFFF"
-        android:popupBackground="#E7ECEF"
-        app:layout_constraintBottom_toTopOf="@+id/time"
+    <View
+        android:id="@+id/viewInput"
+        android:layout_width="410dp"
+        android:layout_height="109dp"
+        android:background="#E7ECEF"
+        app:layout_constraintBottom_toTopOf="@+id/viewMovies"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/theater"
+        app:layout_constraintVertical_bias="0.009" />
 
     <Spinner
         android:id="@+id/theater"
         android:layout_width="234dp"
         android:layout_height="55dp"
-        android:layout_marginStart="10px"
         android:backgroundTint="#AA1155"
         android:dropDownWidth="match_parent"
         android:outlineProvider="none"
@@ -128,55 +80,19 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Spinner
-        android:id="@+id/time"
+        android:id="@+id/date"
         android:layout_width="178dp"
         android:layout_height="55dp"
+        android:layout_marginEnd="234dp"
         android:backgroundTint="#AA1155"
-        android:backgroundTintMode="multiply"
-        android:hapticFeedbackEnabled="false"
+        android:backgroundTintMode="src_atop"
+        android:foregroundTint="#FFFFFF"
         android:popupBackground="#E7ECEF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/movie"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/time"
+        app:layout_constraintEnd_toEndOf="@+id/viewInput"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198" />
-
-    <TextView
-        android:id="@+id/PVM2"
-        android:layout_width="118dp"
-        android:layout_height="38dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="PVM"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/date"
-        app:layout_constraintEnd_toEndOf="@+id/date"
-        app:layout_constraintStart_toStartOf="@+id/date"
-        app:layout_constraintTop_toTopOf="@+id/date" />
-
-    <TextView
-        android:id="@+id/PVM3"
-        android:layout_width="181dp"
-        android:layout_height="39dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="ELOKUVA"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/movie"
-        app:layout_constraintEnd_toEndOf="@+id/movie"
-        app:layout_constraintStart_toEndOf="@+id/time"
-        app:layout_constraintTop_toBottomOf="@+id/theater" />
-
-    <TextView
-        android:id="@+id/PVM"
-        android:layout_width="118dp"
-        android:layout_height="38dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="KLO"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/time"
-        app:layout_constraintEnd_toEndOf="@+id/time"
-        app:layout_constraintStart_toStartOf="@+id/time"
-        app:layout_constraintTop_toBottomOf="@+id/date" />
+        app:layout_constraintTop_toTopOf="@+id/viewInput"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Spinner
         android:id="@+id/movie"
@@ -184,63 +100,36 @@
         android:layout_height="55dp"
         android:backgroundTint="#AA1155"
         android:popupBackground="#E7ECEF"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/viewMovies"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="152dp"
-        android:layout_height="176dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
+    <Spinner
+        android:id="@+id/time"
+        android:layout_width="178dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#AA1155"
+        android:backgroundTintMode="multiply"
+        android:hapticFeedbackEnabled="false"
+        android:popupBackground="#E7ECEF"
+        app:layout_constraintBottom_toBottomOf="@+id/viewInput"
+        app:layout_constraintEnd_toStartOf="@+id/movie"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view3"
-        app:srcCompat="@drawable/joker_full" />
+        app:layout_constraintTop_toTopOf="@+id/viewInput"
+        app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="140dp"
-        android:layout_height="35dp"
-        android:text="Elokuvan tiedot"
-        android:textColor="#011627"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movies"
+        android:layout_width="383dp"
+        android:layout_height="458dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/view3"
-        app:layout_constraintVertical_bias="0.077" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#880044"
-        android:text="OSTA LIPPU"
-        android:textColor="#E7ECEF"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/view3"
-        app:layout_constraintVertical_bias="0.87" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="98dp"
-        android:layout_height="53dp"
-        android:text="LOGO"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592" />
+        app:layout_constraintTop_toTopOf="@+id/viewMovies"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
