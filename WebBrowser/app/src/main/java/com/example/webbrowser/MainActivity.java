@@ -47,13 +47,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickSearch(View v) {
         try {
-            if (urlInput.getText().toString().equals("index.html")) {
-                web.loadUrl("file:///android_asset/index.html");
-                urlInput.setText("");
-            } else {
-                web.loadUrl("https://" + urlInput.getText().toString());
-                urlInput.setText("");
-            }
+            web.loadUrl("https://" + urlInput.getText().toString());
+            urlInput.setText("");
         }catch (Exception e) {
             e.printStackTrace();
         }
@@ -72,8 +67,10 @@ public class MainActivity extends AppCompatActivity {
         web.reload();
     }
     public void onClickLoadHTML(View v) {
+        web.loadUrl("file:///android_asset/index.html");
+    }
+    public void onClickChangeHTML (View v) {
         web.evaluateJavascript("javascript:shoutOut()", null);
     }
-
 }
 

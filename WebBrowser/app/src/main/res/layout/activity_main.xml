@@ -98,10 +98,21 @@
         android:layout_height="53dp"
         android:onClick="onClickLoadHTML"
         android:text="@string/load_html_button"
+        app:layout_constraintBottom_toBottomOf="@+id/initHTML"
+        app:layout_constraintStart_toEndOf="@+id/nextButton"
+        app:layout_constraintTop_toTopOf="@+id/initHTML" />
+
+    <Button
+        android:id="@+id/initHTML"
+        android:layout_width="99dp"
+        android:layout_height="53dp"
+        android:backgroundTint="#302A37"
+        android:onClick="onClickChangeHTML"
+        android:text="@string/init_html_button_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/refreshButton"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/nextButton"
+        app:layout_constraintStart_toEndOf="@+id/loadHTML"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
