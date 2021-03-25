@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WebBrowser</string>
+    <string name="searchbar_hint">Enter your URL</string>
+    <string name="search_icon_ContentDesc">search icon</string>
+    <string name="previous_button_ContentDesc">previous button</string>
+    <string name="next_page_button_ContentDesc">next page button</string>
+    <string name="refresh_button_ContentDesc">refresh button</string>
+    <string name="load_html_button">Load HTML</string>
+    <string name="init_html_button_text">Init HTML</string>
 </resources>
