@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HavingFunWithSidebar</string>
+    <string name="textview_hint">this box will show your text</string>
+    <string name="textInput_hint">write your text here</string>
 </resources>
